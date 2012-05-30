@@ -24,7 +24,7 @@
 #X restore 7 14 pd gemwin;
 #X msg 7 -8 create;
 #X text 3 -29 Create window:;
-#X obj 117 -14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 117 -14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 134 -15 enable;
 #N canvas 862 244 346 237 webcam-src 0;
@@ -32,7 +32,7 @@
 #X msg 97 107 driver 0;
 #X obj 12 72 gemhead 10;
 #X obj 12 155 pix_rgba;
-#X obj 12 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 12 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 89 63 loadbang;
 #X obj 12 30 inlet;
@@ -53,7 +53,7 @@
 #X connect 10 0 0 0;
 #X connect 11 0 0 0;
 #X restore 117 6 pd webcam-src;
-#X obj 222 -14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 222 -14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 239 -15 enable;
 #N canvas 311 386 346 237 webcam2-src 0;
@@ -61,7 +61,7 @@
 #X msg 97 107 driver 0;
 #X obj 12 72 gemhead 10;
 #X obj 12 155 pix_rgba;
-#X obj 12 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 12 52 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 89 63 loadbang;
 #X obj 12 30 inlet;
@@ -664,7 +664,7 @@
 #X obj 10 275 outlet;
 #X obj 55 17 inlet;
 #X obj 100 17 inlet;
-#N canvas 308 379 450 300 5waySwitcher 0;
+#N canvas 678 138 450 300 5waySwitcher 0;
 #X obj 14 11 inlet;
 #X obj 98 11 inlet;
 #X obj 14 271 outlet;
@@ -683,7 +683,7 @@
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -749,7 +749,7 @@
 #X connect 26 0 17 0;
 #X connect 27 0 26 0;
 #X restore 127 96 pd 5waySwitcher;
-#N canvas 0 278 432 437 FXchan1 0;
+#N canvas 648 174 432 437 FXchan1 0;
 #X obj -18 -165 inlet;
 #X obj 340 -165 inlet;
 #X obj -18 229 outlet;
@@ -848,6 +848,11 @@ of the same name.;
 -1 -1;
 #X obj 232 -110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj -5 15 r cam1FX1a;
+#X obj 65 15 r cam1FX1b;
+#X obj 135 15 r cam1FX1c;
+#X obj 205 15 r cam1FX1d;
+#X obj 275 15 r cam1FX1e;
 #X connect 0 0 3 0;
 #X connect 1 0 3 6;
 #X connect 3 0 2 0;
@@ -871,12 +876,17 @@ of the same name.;
 #X connect 18 0 10 0;
 #X connect 19 0 12 0;
 #X connect 20 0 14 0;
+#X connect 21 0 3 1;
+#X connect 22 0 3 2;
+#X connect 23 0 3 3;
+#X connect 24 0 3 4;
+#X connect 25 0 3 5;
 #X restore 27 163 pd FXchan1;
-#N canvas 830 325 341 372 FXchan2 0;
+#N canvas 300 322 341 372 FXchan2 0;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 316 1;
+-1 -1 100 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -909,6 +919,9 @@ http://www.petewarden.com;
 #X obj 155 31 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 155 56 random 18;
+#X obj 25 56 r cam1FX2a;
+#X obj 25 148 print;
+#X obj 25 80 autoscale 0.01 0.5;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 6 0;
@@ -916,6 +929,8 @@ http://www.petewarden.com;
 #X connect 5 0 0 1;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
+#X connect 8 0 10 0;
+#X connect 10 0 9 0;
 #X restore 102 163 pd FXchan2;
 #N canvas 204 287 450 426 FXchan3 0;
 #N canvas 197 248 437 372 SolarizeVFX 0;
@@ -2024,7 +2039,6 @@ of each other.;
 #X obj 14 51 pix_threshold_bernsen 16 16;
 #X obj 14 71 pix_fiducialtrack;
 #X obj 14 8 inlet;
-#X obj 205 105 route 0 1 2 4 5 11;
 #N canvas 80 211 450 488 fid0track 0;
 #X floatatom 132 134 5 0 0 0 - - -;
 #X floatatom 84 120 5 0 0 0 - - -;
@@ -2071,7 +2085,43 @@ of each other.;
 #X connect 13 0 2 0;
 #X connect 15 0 14 0;
 #X connect 16 0 15 1;
-#X restore 205 181 pd fid0track;
+#X restore 488 15 pd fid0track;
+#X obj 205 105 route 1 2 3 4 5 9 10 11 12 14 15;
+#N canvas 722 100 450 300 fid2track 0;
+#X obj 21 18 inlet;
+#X obj 21 49 unpack 0 0 0;
+#X obj 90 75 autoscale;
+#X obj 21 130 s cam1FX1a;
+#X obj 91 130 s cam1FX1b;
+#X obj 161 130 s cam1FX1c;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 4 0;
+#X connect 1 2 2 0;
+#X connect 2 0 5 0;
+#X restore 222 211 pd fid2track;
+#N canvas 722 100 450 300 fid1track 0;
+#X obj 21 18 inlet;
+#X obj 21 49 unpack 0 0 0;
+#X obj 90 75 autoscale;
+#X obj 21 130 s cam1FX1c;
+#X obj 91 130 s cam1FX1d;
+#X obj 161 130 s cam1FX1e;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 4 0;
+#X connect 1 2 2 0;
+#X connect 2 0 5 0;
+#X restore 205 231 pd fid1track;
+#N canvas 722 100 450 300 fid3track 0;
+#X obj 21 18 inlet;
+#X obj 21 49 unpack 0 0 0;
+#X obj 90 75 autoscale;
+#X obj 21 130 s cam1FX2a;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 2 2 0;
+#X restore 239 191 pd fid3track;
 #X connect 4 0 0 0;
 #X connect 4 1 1 0;
 #X connect 4 2 2 0;
@@ -2079,9 +2129,11 @@ of each other.;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 7 1 4 0;
-#X connect 7 1 9 0;
+#X connect 7 1 10 0;
 #X connect 8 0 5 0;
-#X connect 9 0 10 0;
+#X connect 10 0 12 0;
+#X connect 10 1 11 0;
+#X connect 10 2 13 0;
 #X restore 132 69 pd fiducialProcessing;
 #N canvas 702 25 576 555 layoutSplitScreen 0;
 #X obj 28 20 inlet;

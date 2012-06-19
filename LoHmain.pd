@@ -1,4 +1,4 @@
-#N canvas 678 25 538 675 10;
+#N canvas 678 25 538 511 10;
 #X declare -lib mrpeach;
 #X obj 2 -26 cnv 15 100 60 empty empty empty 20 12 0 14 -195568 -66577
 0;
@@ -547,58 +547,10 @@
 #X connect 8 0 5 0;
 #X connect 9 0 10 0;
 #X connect 10 0 2 4;
-#X restore 17 407 pd colourProc;
-#X obj 17 376 pix_mix;
-#X obj 70 374 hsl 104 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X msg 67 354 0;
-#X msg 150 354 1;
-#X text 107 352 pan;
-#X obj 17 576 pix_texture;
+#X restore 222 242 pd colourProc;
+#X obj 222 308 pix_texture;
 #X obj 342 -39 import mrpeach;
-#N canvas 90 335 450 300 flip-\$0 0;
-#X obj 23 17 inlet;
-#X obj 23 267 outlet;
-#X msg 34 204 none;
-#X msg 74 204 horizontal;
-#X msg 151 204 vertical;
-#X msg 215 204 both;
-#X obj 23 241 pix_flip;
-#X obj 53 68 vradio 15 1 0 4 empty empty flip 0 -8 0 8 -262144 -1 -1
-0;
-#X text 69 65 none;
-#X text 69 82 horizontal;
-#X text 69 97 vertical;
-#X text 69 112 both;
-#X obj 34 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 74 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 151 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 215 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 53 136 select 0 1 2 3;
-#X connect 0 0 6 0;
-#X connect 2 0 6 0;
-#X connect 3 0 6 0;
-#X connect 4 0 6 0;
-#X connect 5 0 6 0;
-#X connect 6 0 1 0;
-#X connect 7 0 16 0;
-#X connect 12 0 2 0;
-#X connect 13 0 3 0;
-#X connect 14 0 4 0;
-#X connect 15 0 5 0;
-#X connect 16 0 12 0;
-#X connect 16 1 13 0;
-#X connect 16 2 14 0;
-#X connect 16 3 15 0;
-#X coords 0 -1 1 1 84 82 2 50 50;
-#X restore 17 434 pd flip-\$0;
 #X obj 309 37 bng 15 250 50 0 empty empty Random 18 8 0 10 -262144
--1 -1;
-#X obj 369 37 bng 15 250 50 0 empty empty Default 18 8 0 10 -262144
 -1 -1;
 #N canvas 183 415 450 300 cam1FX 0;
 #X obj 10 17 inlet;
@@ -624,7 +576,7 @@
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 4;
+-1 1;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -699,20 +651,20 @@
 #N canvas 367 211 458 427 ChromiumVFX 0;
 #X obj 12 3 inlet;
 #X obj 57 99 vsl 30 80 0 1 0 0 empty empty edge_1 -2 -9 0 8 -262144
--1 -1 6863 1;
+-1 -1 4361 1;
 #X obj 12 309 outlet;
 #X floatatom 57 188 5 0 0 0 - - -;
 #X obj 107 99 vsl 30 80 0 1 0 0 empty empty edge_2 -2 -9 0 8 -262144
--1 -1 2314 1;
+-1 -1 2801 1;
 #X floatatom 107 188 5 0 0 0 - - -;
 #X obj 157 99 vsl 30 80 0 1 0 0 empty empty red -2 -9 0 8 -262144 -1
--1 1835 1;
+-1 3519 1;
 #X floatatom 157 188 5 0 0 0 - - -;
 #X obj 207 99 vsl 30 80 0 1 0 0 empty empty green -2 -9 0 8 -262144
--1 -1 718 1;
+-1 -1 3592 1;
 #X floatatom 207 188 5 0 0 0 - - -;
 #X obj 257 99 vsl 30 80 0 1 0 0 empty empty blue -2 -9 0 8 -262144
--1 -1 7182 1;
+-1 -1 7900 1;
 #X floatatom 257 188 5 0 0 0 - - -;
 #X obj 226 71 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
@@ -829,7 +781,7 @@ of the same name.;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 638 1;
+-1 -1 958 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -879,31 +831,31 @@ http://www.petewarden.com;
 #N canvas 197 248 437 372 SolarizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty end -2 -9 0 8 -262144 -1
--1 1277 1;
+-1 7581 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.784 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty start -2 -9 0 8 -262144
--1 -1 2554 1;
+-1 -1 2953 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.24 256;
 #X obj 57 83 vsl 30 80 0.01 1 1 0 empty empty thresh -2 -9 0 8 -262144
--1 -1 0 1;
+-1 -1 6429 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.35 256;
 #X obj 162 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty floor -2 -9 0 8 -262144
--1 -1 5506 1;
+-1 -1 1197 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.265 256;
 #X obj 12 241 pix_freeframe ./plugins/SolarizeVFX;
 #X obj 257 83 vsl 30 80 0 1 0 0 empty empty ceiling -2 -9 0 8 -262144
--1 -1 5745 1;
+-1 -1 4628 1;
 #X floatatom 257 168 5 0 0 0 - - -;
 #X obj 257 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.81 256;
@@ -1012,7 +964,7 @@ scales.;
 #X obj 12 6 inlet;
 #X obj 12 279 outlet;
 #X obj 67 82 vsl 30 80 0 1 0 0 empty empty scale -2 -9 0 8 -262144
--1 -1 6543 1;
+-1 -1 1277 1;
 #X obj 208 148 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 117 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
@@ -1022,18 +974,18 @@ scales.;
 #X floatatom 67 167 5 0 0 0 - - -;
 #X floatatom 117 167 5 0 0 0 - - -;
 #X obj 208 78 tgl 15 0 empty empty horizontal 17 7 0 8 -262144 -1 -1
-0 1;
+1 1;
 #X obj 208 98 tgl 15 0 empty empty mirror 17 7 0 8 -262144 -1 -1 1
 1;
 #X obj 117 82 vsl 30 80 0 1 0 0 empty empty speed1 0 -9 0 8 -262144
--1 -1 3112 1;
+-1 -1 1436 1;
 #X msg 281 193 0;
 #X obj 12 241 pix_freeframe ./plugins/SlideVFX;
 #X obj 167 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.47 256;
 #X floatatom 167 167 5 0 0 0 - - -;
 #X obj 167 82 vsl 30 80 0 1 0 0 empty empty speed2 0 -9 0 8 -262144
--1 -1 2953 1;
+-1 -1 559 1;
 #X text 55 52 SlideVFX;
 #X text 69 277 The image is broken into segments which are slid independantly
 of each other.;
@@ -1120,23 +1072,23 @@ of each other.;
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 1117 1;
+-1 -1 319 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 5506 1;
+-1 -1 6703 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 3910 1;
+-1 -1 4309 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 5905 1;
+-1 -1 7022 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -1219,7 +1171,7 @@ of each other.;
 #X connect 15 0 0 5;
 #X restore 327 163 pd FXchan5;
 #X obj 230 97 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 4;
+-1 1;
 #X obj 230 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X connect 0 0 4 0;
@@ -1242,7 +1194,7 @@ of each other.;
 #X connect 11 0 7 1;
 #X connect 11 0 6 1;
 #X connect 11 0 5 1;
-#X restore 117 125 pd cam1FX;
+#X restore 157 124 pd cam1FX;
 #N canvas 484 373 450 300 cam2FX 0;
 #X obj 10 17 inlet;
 #X obj 10 275 outlet;
@@ -1267,7 +1219,7 @@ of each other.;
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 4;
+-1 1;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -1342,20 +1294,20 @@ of each other.;
 #N canvas 367 211 458 427 ChromiumVFX 0;
 #X obj 12 3 inlet;
 #X obj 57 99 vsl 30 80 0 1 0 0 empty empty edge_1 -2 -9 0 8 -262144
--1 -1 319 1;
+-1 -1 479 1;
 #X obj 12 309 outlet;
 #X floatatom 57 188 5 0 0 0 - - -;
 #X obj 107 99 vsl 30 80 0 1 0 0 empty empty edge_2 -2 -9 0 8 -262144
--1 -1 2713 1;
+-1 -1 5985 1;
 #X floatatom 107 188 5 0 0 0 - - -;
 #X obj 157 99 vsl 30 80 0 1 0 0 empty empty red -2 -9 0 8 -262144 -1
--1 4469 1;
+-1 7262 1;
 #X floatatom 157 188 5 0 0 0 - - -;
 #X obj 207 99 vsl 30 80 0 1 0 0 empty empty green -2 -9 0 8 -262144
--1 -1 7182 1;
+-1 -1 718 1;
 #X floatatom 207 188 5 0 0 0 - - -;
 #X obj 257 99 vsl 30 80 0 1 0 0 empty empty blue -2 -9 0 8 -262144
--1 -1 4947 1;
+-1 -1 6224 1;
 #X floatatom 257 188 5 0 0 0 - - -;
 #X obj 226 71 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
@@ -1462,7 +1414,7 @@ of the same name.;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 0 1;
+-1 -1 1277 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -1507,35 +1459,35 @@ http://www.petewarden.com;
 #N canvas 197 248 437 372 SolarizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty end -2 -9 0 8 -262144 -1
--1 4548 1;
+-1 5905 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.784 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty start -2 -9 0 8 -262144
--1 -1 1357 1;
+-1 -1 3272 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.24 256;
 #X obj 57 83 vsl 30 80 0.01 1 1 0 empty empty thresh -2 -9 0 8 -262144
--1 -1 7125 1;
+-1 -1 7446 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.35 256;
 #X obj 162 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty floor -2 -9 0 8 -262144
--1 -1 7740 1;
+-1 -1 4469 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.265 256;
 #X obj 12 241 pix_freeframe ./plugins/SolarizeVFX;
 #X obj 257 83 vsl 30 80 0 1 0 0 empty empty ceiling -2 -9 0 8 -262144
--1 -1 5426 1;
+-1 -1 5107 1;
 #X floatatom 257 168 5 0 0 0 - - -;
 #X obj 257 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.81 256;
-#X obj 247 52 tgl 15 0 empty empty limit 17 7 0 8 -262144 -1 -1 0 1
+#X obj 247 52 tgl 15 0 empty empty limit 17 7 0 8 -262144 -1 -1 1 1
 ;
 #X text 69 277 Smoothly changes between increasing and inverting colour
 scales.;
@@ -1640,7 +1592,7 @@ scales.;
 #X obj 12 6 inlet;
 #X obj 12 279 outlet;
 #X obj 67 82 vsl 30 80 0 1 0 0 empty empty scale -2 -9 0 8 -262144
--1 -1 7740 1;
+-1 -1 2075 1;
 #X obj 208 148 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 117 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
@@ -1654,14 +1606,14 @@ scales.;
 #X obj 208 98 tgl 15 0 empty empty mirror 17 7 0 8 -262144 -1 -1 0
 1;
 #X obj 117 82 vsl 30 80 0 1 0 0 empty empty speed1 0 -9 0 8 -262144
--1 -1 7820 1;
+-1 -1 6863 1;
 #X msg 281 193 0;
 #X obj 12 241 pix_freeframe ./plugins/SlideVFX;
 #X obj 167 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.47 256;
 #X floatatom 167 167 5 0 0 0 - - -;
 #X obj 167 82 vsl 30 80 0 1 0 0 empty empty speed2 0 -9 0 8 -262144
--1 -1 4628 1;
+-1 -1 6144 1;
 #X text 55 52 SlideVFX;
 #X text 69 277 The image is broken into segments which are slid independantly
 of each other.;
@@ -1748,23 +1700,23 @@ of each other.;
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 4868 1;
+-1 -1 1995 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 2953 1;
+-1 -1 3352 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 6543 1;
+-1 -1 4070 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 3751 1;
+-1 -1 6304 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -1847,7 +1799,7 @@ of each other.;
 #X connect 15 0 0 5;
 #X restore 327 163 pd FXchan5;
 #X obj 228 96 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 4;
+-1 1;
 #X obj 228 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X connect 0 0 4 0;
@@ -1871,10 +1823,10 @@ of each other.;
 #X connect 11 0 6 1;
 #X connect 11 0 5 1;
 #X restore 222 125 pd cam2FX;
-#X obj 369 55 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 365 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 365 91 metro 4000;
-#X msg 403 54 stop;
+#X obj 365 81 metro 4000;
+#X msg 386 55 stop;
 #N canvas 175 361 450 300 image1-src 0;
 #X obj 13 14 cnv 15 170 250 empty empty empty 20 12 0 14 -228992 -66577
 0;
@@ -1901,7 +1853,7 @@ of each other.;
 #X msg 88 211 thread \$1;
 #X obj 159 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 18 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 18 41 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 18 21 inlet;
 #X obj 18 240 outlet;
@@ -1914,21 +1866,21 @@ of each other.;
 #X connect 8 0 7 0;
 #X connect 9 0 2 0;
 #X connect 10 0 9 0;
-#X restore 309 171 pd image1-src;
-#X obj 309 151 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X restore 309 144 pd image1-src;
+#X obj 309 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 326 150 enable;
+#X text 326 123 enable;
 #N canvas 207 410 450 300 chroma_mixer 0;
 #X obj 50 59 cnv 15 160 175 empty empty empty 20 12 0 14 -24198 -66577
 0;
 #X obj 50 212 pix_chroma_key;
 #X msg 85 189 direction \$1;
-#X obj 85 169 tgl 15 1 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+#X obj 85 169 tgl 15 1 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
 ;
 #X floatatom 64 77 5 0 255 0 - - -;
 #X floatatom 74 129 5 0 255 0 - - -;
 #X obj 77 115 hsl 128 12 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 7900 1;
 #X obj 67 62 hsl 128 12 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X msg 64 94 value \$1 \$1 \$1;
@@ -1947,86 +1899,18 @@ of each other.;
 #X connect 9 0 1 0;
 #X connect 10 0 1 0;
 #X connect 11 0 1 1;
-#X restore 222 246 pd chroma_mixer;
-#X obj 309 219 pix_invert;
-#X obj 309 195 pix_add;
-#X obj 17 603 rectangle 5.86 3.3;
-#X msg 345 496 bang;
-#N canvas 39 341 471 356 autoPanner 0;
-#X obj 40 69 t b b;
-#X obj 40 97 random 2;
-#X obj 40 123 * 100;
-#X obj 40 173 / 100;
-#X obj 40 149 line;
-#X msg 97 97 1000;
-#X obj 40 34 inlet;
-#X obj 40 204 outlet;
-#X obj 247 34 inlet;
-#X obj 162 34 inlet;
-#X obj 162 61 tgl 15 0 empty empty enabled 18 8 0 10 -262144 -1 -1
-0 1;
-#X obj 207 137 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 162 136 stop;
-#X obj 162 91 select 0;
-#X obj 162 173 metro 5000;
-#X obj 315 34 inlet;
-#X obj 315 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 315 58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 315 84 select 1;
-#X obj 353 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X msg 332 136 stop;
-#X obj 312 173 metro 5000;
-#X obj 312 199 t b b;
-#X obj 312 279 line;
-#X msg 379 227 1000;
-#X obj 312 227 random 100;
-#X obj 312 253 / 100;
-#X connect 0 0 1 0;
-#X connect 0 1 5 0;
-#X connect 1 0 2 0;
-#X connect 2 0 4 0;
-#X connect 3 0 7 0;
-#X connect 4 0 3 0;
-#X connect 5 0 4 1;
-#X connect 6 0 0 0;
-#X connect 8 0 14 1;
-#X connect 9 0 10 0;
-#X connect 10 0 13 0;
-#X connect 11 0 14 0;
-#X connect 11 0 20 0;
-#X connect 12 0 14 0;
-#X connect 13 0 12 0;
-#X connect 13 1 11 0;
-#X connect 14 0 0 0;
-#X connect 15 0 17 0;
-#X connect 16 0 12 0;
-#X connect 16 0 21 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 0;
-#X connect 18 1 19 0;
-#X connect 19 0 20 0;
-#X connect 20 0 21 0;
-#X connect 21 0 22 0;
-#X connect 22 0 25 0;
-#X connect 22 1 24 0;
-#X connect 23 0 7 0;
-#X connect 24 0 23 1;
-#X connect 25 0 26 0;
-#X connect 26 0 23 0;
-#X restore 67 333 pd autoPanner;
-#X obj 104 310 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 360 516 cnv 15 165 70 empty empty empty 20 12 0 14 -258113 -66577
+#X restore 222 219 pd chroma_mixer;
+#X obj 309 192 pix_invert;
+#X obj 309 168 pix_add;
+#X obj 222 332 rectangle 5.86 3.3;
+#X msg 25 356 bang;
+#X obj 40 376 cnv 15 165 70 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X obj 385 541 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 65 401 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 408 540 auto \$1;
-#X obj 367 566 pix_write;
-#N canvas 602 318 635 351 fiducialProcessing 0;
+#X msg 88 400 auto \$1;
+#X obj 47 426 pix_write;
+#N canvas 602 318 459 351 fiducialProcessing 0;
 #X obj 14 30 pix_grey;
 #X obj 14 51 pix_threshold_bernsen 16 16;
 #X obj 24 81 pix_fiducialtrack;
@@ -2139,7 +2023,7 @@ of each other.;
 #X obj 52 155 spigot 0;
 #X obj -12 155 spigot 1;
 #X obj 223 264 moses 0.1;
-#X obj 97 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 97 115 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 97 135 invert;
 #X obj 274 284 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -2176,87 +2060,116 @@ of each other.;
 #X connect 18 0 5 0;
 #X connect 19 0 15 0;
 #X restore 92 223 pd breathe;
-#X obj 14 248 translateXYZ -5.4 -3 0;
 #X obj 92 203 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 636 143 636 543 displayTagInfo 1;
-#X obj 12 8 inlet;
-#X floatatom 43 141 5 0 0 0 ID - -;
-#X floatatom 43 157 5 0 0 0 x - -;
-#X floatatom 43 173 5 0 0 0 y - -;
-#X floatatom 43 189 5 0 0 0 angle - -;
-#X obj 43 116 unpack 0 0 0 0;
-#X obj 147 206 rad2deg;
-#X floatatom 43 209 5 0 0 0 angle - -;
-#X obj 414 58 gemhead;
-#X msg 454 272 font \$1;
-#X obj 454 253 openpanel;
-#X obj 454 236 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
+#N canvas 636 143 484 393 displayTagInfo 0;
+#X obj 63 28 inlet;
+#X floatatom 63 81 5 0 0 0 ID - -;
+#X floatatom 63 97 5 0 0 0 x - -;
+#X floatatom 63 113 5 0 0 0 y - -;
+#X floatatom 63 129 5 0 0 0 angle - -;
+#X obj 63 56 unpack 0 0 0 0;
+#X obj 267 136 rad2deg;
+#X floatatom 63 149 5 0 0 0 angle - -;
+#X obj 294 190 gemhead;
+#X msg 344 312 font \$1;
+#X obj 344 293 openpanel;
+#X obj 344 276 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
-#X msg 453 200 justify left base;
-#X obj 414 79 translateXYZ;
-#X obj 414 298 text2d;
-#X msg 432 168 text \$1 \$2 \$3 \$4;
-#X obj 78 250 pack f f f f;
-#X floatatom 466 36 5 0 0 0 - - -;
-#X floatatom 506 36 5 0 0 0 - - -;
-#X obj 147 229 int;
-#X obj 141 150 * 100;
-#X obj 141 173 int;
-#X obj 101 150 * 100;
-#X obj 101 173 int;
-#X obj 312 382 pix_texture;
-#X obj 306 70 gemhead;
-#X obj 312 110 color 1 0 0;
-#X obj 312 502 square 0.02;
-#X obj 312 477 translateXYZ -5.2 -1.6 1;
-#X obj 347 413 * 2.27;
-#X obj 389 413 * -1.26;
-#X obj 312 441 translateXYZ 0 0 0;
+#X msg 315 254 justify left base;
+#X obj 294 338 text2d;
+#X msg 304 232 text \$1 \$2 \$3 \$4;
+#X obj 198 180 pack f f f f;
+#X obj 267 159 int;
+#X obj 261 90 * 100;
+#X obj 261 113 int;
+#X obj 221 90 * 100;
+#X obj 221 113 int;
+#X obj 102 210 pix_texture;
+#X obj 102 164 gemhead;
+#X obj 102 187 color 1 0 0;
+#X obj 137 231 * 2.27;
+#X obj 179 231 * -1.26;
+#X obj 102 277 translateXYZ -5.2 -1.6 1;
+#N canvas 594 98 450 558 fidcolourpicker 0;
+#X obj 12 8 inlet;
+#X obj 12 339 outlet;
+#X obj 12 36 select 0 1 2 3 4 5 6 7 8 9;
+#X obj 12 318 pack f f f;
+#X msg 12 277 1 0 0;
+#X msg 27 257 0 1 0;
+#X msg 42 237 0 0 1;
+#X msg 57 217 1 1 0;
+#X msg 73 197 0 1 1;
+#X msg 88 177 1 0 1;
+#X connect 0 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 2 2 6 0;
+#X connect 2 3 7 0;
+#X connect 2 4 8 0;
+#X connect 2 5 9 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X restore -19 187 pd fidcolourpicker;
+#X obj 102 302 circle 0.04;
+#X obj 294 211 translateXYZ -3.68 -3.79 0;
+#X obj 102 254 translateXYZ 0 0 0;
+#X obj 137 107 - 1;
+#X obj 137 128 abs;
 #X connect 0 0 5 0;
 #X connect 5 0 1 0;
-#X connect 5 0 16 0;
+#X connect 5 0 15 0;
+#X connect 5 0 27 0;
 #X connect 5 1 2 0;
-#X connect 5 1 22 0;
-#X connect 5 1 29 0;
+#X connect 5 1 19 0;
+#X connect 5 1 31 0;
 #X connect 5 2 3 0;
-#X connect 5 2 20 0;
-#X connect 5 2 30 0;
+#X connect 5 2 17 0;
+#X connect 5 2 25 0;
 #X connect 5 3 4 0;
 #X connect 5 3 6 0;
 #X connect 6 0 7 0;
-#X connect 6 0 19 0;
-#X connect 8 0 13 0;
-#X connect 9 0 14 0;
+#X connect 6 0 16 0;
+#X connect 8 0 29 0;
+#X connect 9 0 13 0;
 #X connect 10 0 9 0;
 #X connect 11 0 10 0;
-#X connect 12 0 14 0;
-#X connect 13 0 14 0;
+#X connect 12 0 13 0;
+#X connect 14 0 13 0;
 #X connect 15 0 14 0;
-#X connect 16 0 15 0;
-#X connect 17 0 13 1;
-#X connect 18 0 13 2;
-#X connect 19 0 16 3;
-#X connect 20 0 21 0;
-#X connect 21 0 16 2;
+#X connect 16 0 15 3;
+#X connect 17 0 18 0;
+#X connect 18 0 15 2;
+#X connect 19 0 20 0;
+#X connect 20 0 15 1;
+#X connect 21 0 30 0;
 #X connect 22 0 23 0;
-#X connect 23 0 16 1;
-#X connect 24 0 31 0;
-#X connect 25 0 26 0;
-#X connect 26 0 24 0;
-#X connect 28 0 27 0;
-#X connect 29 0 31 1;
-#X connect 30 0 31 2;
-#X connect 31 0 28 0;
+#X connect 23 0 21 0;
+#X connect 24 0 30 1;
+#X connect 25 0 30 2;
+#X connect 26 0 28 0;
+#X connect 27 0 23 1;
+#X connect 29 0 13 0;
+#X connect 30 0 26 0;
+#X connect 31 0 32 0;
+#X connect 32 0 24 0;
 #X restore 24 105 pd displayTagInfo;
-#X obj 14 180 pix_flip horizontal;
+#X obj 14 248 translateXYZ -5.4 -3 0.01;
+#X obj 14 200 pix_flip;
+#X msg 27 180 horizontal;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 0 13 0;
 #X connect 2 1 11 0;
-#X connect 2 1 20 0;
+#X connect 2 1 19 0;
 #X connect 3 0 0 0;
-#X connect 8 0 18 0;
+#X connect 8 0 20 0;
 #X connect 11 0 6 0;
 #X connect 11 1 5 0;
 #X connect 11 3 9 0;
@@ -2264,300 +2177,14 @@ of each other.;
 #X connect 13 0 21 0;
 #X connect 14 0 13 1;
 #X connect 15 0 14 0;
-#X connect 17 0 18 3;
-#X connect 18 0 12 0;
-#X connect 19 0 17 0;
+#X connect 17 0 20 3;
+#X connect 18 0 17 0;
+#X connect 20 0 12 0;
 #X connect 21 0 8 0;
-#X restore 125 48 pd fiducialProcessing;
-#N canvas 702 25 576 555 layoutSplitScreen 0;
-#X obj 28 20 inlet;
-#X obj 278 20 inlet;
-#X obj 28 305 pix_texture;
-#X obj 278 305 pix_texture;
-#X obj 28 277 translateXYZ -3.5 0 0;
-#X obj 278 277 translateXYZ 3.5 0 0;
-#X obj 28 333 rectangle 3.4 3.4;
-#X obj 278 333 rectangle 3.4 3.4;
-#X msg 36 169 -3.5;
-#X msg 78 168 3.5;
-#X msg 115 167 2000;
-#X obj 44 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 44 129 t b b;
-#X obj 104 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 104 129 t b b;
-#X obj 69 213 line;
-#X msg 284 169 -3.5;
-#X msg 326 168 3.5;
-#X msg 363 167 2000;
-#X obj 292 129 t b b;
-#X obj 352 129 t b b;
-#X obj 317 213 line;
-#X connect 0 0 4 0;
-#X connect 1 0 5 0;
-#X connect 2 0 6 0;
-#X connect 3 0 7 0;
-#X connect 4 0 2 0;
-#X connect 5 0 3 0;
-#X connect 8 0 15 0;
-#X connect 9 0 15 0;
-#X connect 10 0 15 1;
-#X connect 11 0 12 0;
-#X connect 11 0 20 0;
-#X connect 12 0 8 0;
-#X connect 12 1 10 0;
-#X connect 13 0 14 0;
-#X connect 13 0 19 0;
-#X connect 14 0 9 0;
-#X connect 14 1 10 0;
-#X connect 15 0 4 1;
-#X connect 16 0 21 0;
-#X connect 17 0 21 0;
-#X connect 18 0 21 1;
-#X connect 19 0 16 0;
-#X connect 19 1 18 0;
-#X connect 20 0 17 0;
-#X connect 20 1 18 0;
-#X connect 21 0 5 1;
-#X restore 371 364 pd layoutSplitScreen;
-#N canvas 702 25 576 555 layoutTwinCubes 0;
-#X obj 28 20 inlet;
-#X obj 278 20 inlet;
-#X obj 28 492 pix_texture;
-#X obj 278 492 pix_texture;
-#X msg 36 169 -3.5;
-#X msg 78 168 3.5;
-#X msg 115 167 2000;
-#X obj 44 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 44 129 t b b;
-#X obj 104 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 104 129 t b b;
-#X obj 69 213 line;
-#X msg 284 169 -3.5;
-#X msg 326 168 3.5;
-#X msg 363 167 2000;
-#X obj 292 129 t b b;
-#X obj 352 129 t b b;
-#X obj 317 213 line;
-#X obj 28 470 rotateXYZ;
-#X obj 278 470 rotateXYZ;
-#X obj 28 277 translateXYZ -3.5 0 -2;
-#X obj 278 277 translateXYZ 3.5 0 -2;
-#N canvas 206 110 450 300 spinner180 0;
-#X floatatom 56 76 0 0 0 0 - - -;
-#X msg 2 1 bang;
-#X obj 56 53 + 1;
-#X msg 48 1 stop;
-#X obj 2 53 float;
-#X obj 2 30 metro 50;
-#X obj 2 -25 inlet;
-#X obj 48 -25 inlet;
-#X obj 56 100 mod 360;
-#X obj 56 125 - 180;
-#X obj 56 148 outlet;
-#X connect 0 0 8 0;
-#X connect 1 0 5 0;
-#X connect 2 0 0 0;
-#X connect 2 0 4 1;
-#X connect 3 0 5 0;
-#X connect 3 0 5 0;
-#X connect 4 0 2 0;
-#X connect 5 0 4 0;
-#X connect 6 0 1 0;
-#X connect 7 0 3 0;
-#X connect 8 0 9 0;
-#X connect 9 0 10 0;
-#X restore 47 382 pd spinner180;
-#X obj 47 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 114 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 52 421 5 0 0 0 - - -;
-#N canvas 206 110 450 300 spinner180 0;
-#X floatatom 56 76 0 0 0 0 - - -;
-#X msg 2 1 bang;
-#X obj 56 53 + 1;
-#X msg 48 1 stop;
-#X obj 2 53 float;
-#X obj 2 30 metro 50;
-#X obj 2 -25 inlet;
-#X obj 48 -25 inlet;
-#X obj 56 100 mod 360;
-#X obj 56 125 - 180;
-#X obj 56 148 outlet;
-#X connect 0 0 8 0;
-#X connect 1 0 5 0;
-#X connect 2 0 0 0;
-#X connect 2 0 4 1;
-#X connect 3 0 5 0;
-#X connect 3 0 5 0;
-#X connect 4 0 2 0;
-#X connect 5 0 4 0;
-#X connect 6 0 1 0;
-#X connect 7 0 3 0;
-#X connect 8 0 9 0;
-#X connect 9 0 10 0;
-#X restore 297 352 pd spinner180;
-#X obj 297 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 364 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 302 421 5 0 0 0 - - -;
-#X obj 28 513 cube 2.5;
-#X obj 278 513 cube 2.5;
-#X obj 297 385 * -1;
-#X obj 168 339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 165 370 5 0 0 0 - - -;
-#X connect 0 0 20 0;
-#X connect 1 0 21 0;
-#X connect 2 0 30 0;
-#X connect 3 0 31 0;
-#X connect 4 0 11 0;
-#X connect 5 0 11 0;
-#X connect 6 0 11 1;
-#X connect 7 0 8 0;
-#X connect 7 0 16 0;
-#X connect 8 0 4 0;
-#X connect 8 1 6 0;
-#X connect 9 0 10 0;
-#X connect 9 0 15 0;
-#X connect 10 0 5 0;
-#X connect 10 1 6 0;
-#X connect 11 0 20 1;
-#X connect 12 0 17 0;
-#X connect 13 0 17 0;
-#X connect 14 0 17 1;
-#X connect 15 0 12 0;
-#X connect 15 1 14 0;
-#X connect 16 0 13 0;
-#X connect 16 1 14 0;
-#X connect 17 0 21 1;
-#X connect 18 0 2 0;
-#X connect 19 0 3 0;
-#X connect 20 0 18 0;
-#X connect 21 0 19 0;
-#X connect 22 0 25 0;
-#X connect 23 0 22 0;
-#X connect 24 0 22 1;
-#X connect 25 0 18 2;
-#X connect 25 0 18 1;
-#X connect 26 0 32 0;
-#X connect 27 0 26 0;
-#X connect 28 0 26 1;
-#X connect 29 0 19 1;
-#X connect 29 0 19 2;
-#X connect 32 0 29 0;
-#X connect 33 0 34 0;
-#X connect 34 0 18 1;
-#X connect 34 0 18 2;
-#X connect 34 0 19 1;
-#X connect 34 0 19 2;
-#X restore 251 364 pd layoutTwinCubes;
-#N canvas 702 25 576 555 layoutDualPlane 0;
-#X obj 28 20 inlet;
-#X obj 278 20 inlet;
-#X obj 28 492 pix_texture;
-#X obj 278 492 pix_texture;
-#X msg 36 169 -3.5;
-#X msg 78 168 3.5;
-#X msg 115 167 2000;
-#X obj 44 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 44 129 t b b;
-#X obj 104 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 104 129 t b b;
-#X obj 69 213 line;
-#X msg 284 169 -3.5;
-#X msg 326 168 3.5;
-#X msg 363 167 2000;
-#X obj 292 129 t b b;
-#X obj 352 129 t b b;
-#X obj 317 213 line;
-#X obj 28 470 rotateXYZ;
-#X obj 278 470 rotateXYZ;
-#N canvas 206 110 450 300 spinner180 0;
-#X floatatom 56 76 0 0 0 0 - - -;
-#X msg 2 1 bang;
-#X obj 56 53 + 1;
-#X msg 48 1 stop;
-#X obj 2 53 float;
-#X obj 2 30 metro 50;
-#X obj 2 -25 inlet;
-#X obj 48 -25 inlet;
-#X obj 56 100 mod 360;
-#X obj 56 125 - 180;
-#X obj 56 148 outlet;
-#X connect 0 0 8 0;
-#X connect 1 0 5 0;
-#X connect 2 0 0 0;
-#X connect 2 0 4 1;
-#X connect 3 0 5 0;
-#X connect 3 0 5 0;
-#X connect 4 0 2 0;
-#X connect 5 0 4 0;
-#X connect 6 0 1 0;
-#X connect 7 0 3 0;
-#X connect 8 0 9 0;
-#X connect 9 0 10 0;
-#X restore 47 382 pd spinner180;
-#X obj 47 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 114 361 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 52 421 5 0 0 0 - - -;
-#X obj 168 339 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X floatatom 165 370 5 0 0 0 - - -;
-#X obj 28 513 rectangle 4.5 3.5;
-#X obj 278 513 rectangle 4.5 3.5;
-#X obj 28 277 translateXYZ 0 0 -2;
-#X obj 278 277 translateXYZ 0 0.01 -2;
-#X connect 0 0 28 0;
-#X connect 1 0 29 0;
-#X connect 2 0 26 0;
-#X connect 3 0 27 0;
-#X connect 4 0 11 0;
-#X connect 5 0 11 0;
-#X connect 6 0 11 1;
-#X connect 7 0 8 0;
-#X connect 7 0 16 0;
-#X connect 8 0 4 0;
-#X connect 8 1 6 0;
-#X connect 9 0 10 0;
-#X connect 9 0 15 0;
-#X connect 10 0 5 0;
-#X connect 10 1 6 0;
-#X connect 11 0 28 1;
-#X connect 12 0 17 0;
-#X connect 13 0 17 0;
-#X connect 14 0 17 1;
-#X connect 15 0 12 0;
-#X connect 15 1 14 0;
-#X connect 16 0 13 0;
-#X connect 16 1 14 0;
-#X connect 17 0 29 1;
-#X connect 18 0 2 0;
-#X connect 19 0 3 0;
-#X connect 20 0 23 0;
-#X connect 21 0 20 0;
-#X connect 22 0 20 1;
-#X connect 23 0 18 1;
-#X connect 23 0 19 1;
-#X connect 24 0 25 0;
-#X connect 25 0 18 2;
-#X connect 25 0 19 2;
-#X connect 25 0 18 1;
-#X connect 25 0 19 1;
-#X connect 28 0 18 0;
-#X connect 29 0 19 0;
-#X restore 251 384 pd layoutDualPlane;
-#X msg 367 520 file videos/test/vid2 85;
-#X obj 240 30 tgl 15 0 empty empty monitor 17 8 0 10 -262144 -1 -1
+#X connect 22 0 21 0;
+#X restore 117 48 pd fiducialProcessing;
+#X msg 47 380 file videos/test/vid2 85;
+#X obj 142 30 tgl 15 0 empty empty monitor 17 8 0 10 -262144 -1 -1
 1 1;
 #N canvas 314 415 450 300 goldfishLogo 0;
 #X obj 39 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
@@ -2619,7 +2246,7 @@ of each other.;
 #X msg 63 128 0;
 #X obj 64 235 spigot 0;
 #X obj 0 235 spigot 1;
-#X obj 109 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 109 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 57
 57;
 #X obj 109 215 invert;
 #X obj 0 160 int;
@@ -2692,36 +2319,32 @@ of each other.;
 #X connect 7 0 6 0;
 #X connect 8 0 5 0;
 #X restore 4 41 pd goldfishLogo;
+#X obj 222 285 pix_flip;
+#X msg 230 263 horizontal;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;
-#X connect 6 0 43 0;
+#X connect 6 0 34 0;
 #X connect 7 0 9 0;
-#X connect 9 0 25 0;
+#X connect 9 0 18 0;
 #X connect 11 0 10 0;
-#X connect 13 0 21 0;
-#X connect 14 0 13 0;
-#X connect 15 0 14 2;
-#X connect 16 0 15 0;
-#X connect 17 0 15 0;
-#X connect 19 0 35 0;
-#X connect 21 0 42 0;
-#X connect 21 0 19 0;
-#X connect 22 0 25 2;
-#X connect 22 0 24 2;
-#X connect 25 0 32 0;
-#X connect 26 0 27 0;
-#X connect 27 0 22 0;
-#X connect 28 0 27 0;
-#X connect 29 0 34 0;
-#X connect 30 0 29 0;
-#X connect 32 0 14 1;
-#X connect 33 0 32 1;
-#X connect 34 0 33 0;
-#X connect 36 0 42 0;
-#X connect 37 0 15 0;
-#X connect 38 0 37 1;
-#X connect 40 0 41 0;
-#X connect 41 0 42 0;
-#X connect 47 0 42 0;
-#X connect 48 0 43 1;
+#X connect 13 0 38 0;
+#X connect 14 0 28 0;
+#X connect 16 0 18 2;
+#X connect 16 0 17 2;
+#X connect 18 0 25 0;
+#X connect 19 0 20 0;
+#X connect 20 0 16 0;
+#X connect 21 0 20 0;
+#X connect 22 0 27 0;
+#X connect 23 0 22 0;
+#X connect 25 0 13 0;
+#X connect 26 0 25 1;
+#X connect 27 0 26 0;
+#X connect 29 0 33 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 35 0 33 0;
+#X connect 36 0 34 1;
+#X connect 38 0 14 0;
+#X connect 39 0 38 0;

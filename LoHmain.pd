@@ -1192,8 +1192,8 @@ of each other.;
 #X connect 11 0 7 1;
 #X connect 11 0 6 1;
 #X connect 11 0 5 1;
-#X restore 237 150 pd cam1FX;
-#N canvas 484 373 450 300 cam2FX 0;
+#X restore 421 125 pd cam1FX;
+#N canvas 753 401 450 300 cam2FX 0;
 #X obj 10 17 inlet;
 #X obj 10 275 outlet;
 #X obj 55 17 inlet;
@@ -1224,20 +1224,19 @@ of each other.;
 #X obj 194 198 spigot;
 #X obj 254 198 spigot;
 #X obj 153 84 select 0 1 2 3 4;
-#X obj 98 35 - 1;
 #X obj 270 12 inlet;
 #X obj 148 35 random 5;
 #X obj 148 15 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 240 57 bang inlet 2 for random;
-#X text 239 40 Send 1 through 5 to inlet 1 to set;
 #X obj 343 271 outlet;
+#X text 239 40 Send 0 through 4 to inlet 1 to set;
 #X connect 0 0 18 0;
 #X connect 0 0 19 0;
 #X connect 0 0 20 0;
 #X connect 0 0 21 0;
 #X connect 0 0 22 0;
-#X connect 1 0 24 0;
+#X connect 1 0 17 0;
 #X connect 7 0 18 1;
 #X connect 8 0 18 1;
 #X connect 9 0 19 1;
@@ -1249,7 +1248,7 @@ of each other.;
 #X connect 15 0 22 1;
 #X connect 16 0 22 1;
 #X connect 17 0 23 0;
-#X connect 17 0 30 0;
+#X connect 17 0 28 0;
 #X connect 18 0 2 0;
 #X connect 19 0 3 0;
 #X connect 20 0 4 0;
@@ -1280,10 +1279,9 @@ of each other.;
 #X connect 23 4 12 0;
 #X connect 23 4 10 0;
 #X connect 23 4 8 0;
-#X connect 24 0 17 0;
-#X connect 25 0 27 0;
-#X connect 26 0 17 0;
-#X connect 27 0 26 0;
+#X connect 24 0 26 0;
+#X connect 25 0 17 0;
+#X connect 26 0 25 0;
 #X restore 127 96 pd 5waySwitcher;
 #X obj 228 96 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
 -1 1;
@@ -1296,20 +1294,20 @@ of each other.;
 #N canvas 367 211 458 427 ChromiumVFX 0;
 #X obj 12 3 inlet;
 #X obj 57 99 vsl 30 80 0 1 0 0 empty empty edge_1 -2 -9 0 8 -262144
--1 -1 3511 1;
+-1 -1 6623 1;
 #X obj 12 309 outlet;
 #X floatatom 57 188 5 0 0 0 - - -;
 #X obj 107 99 vsl 30 80 0 1 0 0 empty empty edge_2 -2 -9 0 8 -262144
--1 -1 3272 1;
+-1 -1 2554 1;
 #X floatatom 107 188 5 0 0 0 - - -;
 #X obj 157 99 vsl 30 80 0 1 0 0 empty empty red -2 -9 0 8 -262144 -1
--1 3511 1;
+-1 5825 1;
 #X floatatom 157 188 5 0 0 0 - - -;
 #X obj 207 99 vsl 30 80 0 1 0 0 empty empty green -2 -9 0 8 -262144
--1 -1 1436 1;
+-1 -1 2633 1;
 #X floatatom 207 188 5 0 0 0 - - -;
 #X obj 257 99 vsl 30 80 0 1 0 0 empty empty blue -2 -9 0 8 -262144
--1 -1 160 1;
+-1 -1 4708 1;
 #X floatatom 257 188 5 0 0 0 - - -;
 #X obj 226 71 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
@@ -1412,11 +1410,11 @@ of the same name.;
 #X connect 19 0 12 0;
 #X connect 20 0 14 0;
 #X restore 27 163 pd FXchan6;
-#N canvas 830 325 341 372 FXchan7 0;
+#N canvas 664 316 341 372 FXchan7 0;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 239 1;
+-1 -1 316 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -1457,35 +1455,35 @@ http://www.petewarden.com;
 #X connect 6 0 7 0;
 #X connect 7 0 5 0;
 #X restore 102 163 pd FXchan7;
-#N canvas 204 287 450 426 FXchan8 0;
+#N canvas 8 398 454 317 FXchan8 0;
 #N canvas 197 248 437 372 SolarizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty end -2 -9 0 8 -262144 -1
--1 1117 1;
+-1 5024 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.784 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty start -2 -9 0 8 -262144
--1 -1 7581 1;
+-1 -1 2868 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.24 256;
 #X obj 57 83 vsl 30 80 0.01 1 1 0 empty empty thresh -2 -9 0 8 -262144
--1 -1 6388 1;
+-1 -1 1885 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.35 256;
 #X obj 162 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty floor -2 -9 0 8 -262144
--1 -1 2554 1;
+-1 -1 2947 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.265 256;
 #X obj 12 241 pix_freeframe ./plugins/SolarizeVFX;
 #X obj 257 83 vsl 30 80 0 1 0 0 empty empty ceiling -2 -9 0 8 -262144
--1 -1 7740 1;
+-1 -1 7497 1;
 #X floatatom 257 168 5 0 0 0 - - -;
 #X obj 257 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.81 256;
@@ -1534,67 +1532,125 @@ scales.;
 #X connect 28 0 19 0;
 #X connect 29 0 11 0;
 #X coords 0 -1 1 1 250 135 2 50 50;
-#X restore 38 129 pd SolarizeVFX;
+#X restore 38 29 pd SolarizeVFX;
 #X obj 38 -98 inlet;
 #X obj 78 -98 inlet;
-#X obj 318 -98 inlet;
-#X obj 38 277 outlet;
-#X obj 53 -34 random 99;
-#X obj 53 -10 / 99;
-#X obj 53 -59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 136 -98 inlet;
+#X obj 38 177 outlet;
+#N canvas 698 163 450 300 solarizePresets 0;
+#X obj 10 6 inlet;
+#X obj 380 6 inlet;
+#X obj 10 266 outlet;
+#X obj 60 266 outlet;
+#X obj 110 266 outlet;
+#X obj 160 266 outlet;
+#X obj 210 266 outlet;
+#X obj 260 266 outlet;
+#X obj 10 204 unpack f f f f f f;
+#X msg 101 180 0.434 0.272 0.02 0.626 0.252 1;
+#X msg 25 80 0.747 0.03 0.636 0.929 0.02 1;
+#X msg 55 120 0.697 0.888 0.404 0.727 0.818 0;
+#X msg 40 100 0.626 0.444 0.939 0.05 0.969 1;
+#X msg 71 140 0.03 0.363 0.636 0.373 0.949 0;
+#X msg 86 160 0.272 0.424 0.828 0.676 0.07 0;
+#X obj 10 36 select 0 1 2 3 4 5 6 7 8 9;
+#N canvas 0 0 450 300 fullRandomsolarize 0;
+#X obj 41 93 random 99;
+#X obj 41 117 / 99;
+#X obj 41 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 113 -34 random 99;
-#X obj 113 -10 / 99;
-#X obj 113 -59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 173 -34 random 99;
-#X obj 173 -10 / 99;
-#X obj 173 -59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 233 -34 random 99;
-#X obj 233 -10 / 99;
-#X obj 233 -59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 293 -34 random 99;
-#X obj 293 -10 / 99;
-#X obj 293 -59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 353 -59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 353 -34 random 2;
+#X obj 101 93 random 99;
+#X obj 101 117 / 99;
+#X obj 101 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 161 93 random 99;
+#X obj 161 117 / 99;
+#X obj 161 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 221 93 random 99;
+#X obj 221 117 / 99;
+#X obj 221 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 281 93 random 99;
+#X obj 281 117 / 99;
+#X obj 281 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 341 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 341 93 random 2;
+#X obj 41 -34 inlet;
+#X obj 248 183 pack f f f f f f;
+#X obj 248 209 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 18 0;
+#X connect 2 0 0 0;
+#X connect 3 0 4 0;
+#X connect 4 0 18 1;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 18 2;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 18 3;
+#X connect 11 0 9 0;
+#X connect 12 0 13 0;
+#X connect 13 0 18 4;
+#X connect 14 0 12 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 5;
+#X connect 17 0 2 0;
+#X connect 17 0 5 0;
+#X connect 17 0 8 0;
+#X connect 17 0 11 0;
+#X connect 17 0 14 0;
+#X connect 17 0 15 0;
+#X connect 18 0 19 0;
+#X restore 10 60 pd fullRandomsolarize;
+#X connect 0 0 15 0;
+#X connect 8 0 2 0;
+#X connect 8 1 3 0;
+#X connect 8 2 4 0;
+#X connect 8 3 5 0;
+#X connect 8 4 6 0;
+#X connect 8 5 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X connect 12 0 8 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;
+#X connect 15 0 16 0;
+#X connect 15 1 10 0;
+#X connect 15 2 12 0;
+#X connect 15 3 11 0;
+#X connect 15 4 13 0;
+#X connect 15 5 14 0;
+#X connect 15 6 9 0;
+#X connect 16 0 8 0;
+#X restore 136 -21 pd solarizePresets;
+#X obj 136 -42 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
+-1 -1 4;
+#X obj 78 -77 random 7;
+#X text 253 -18 0 for random. 1+ for presets;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
 #X connect 2 0 7 0;
-#X connect 2 0 10 0;
-#X connect 2 0 13 0;
-#X connect 2 0 16 0;
-#X connect 2 0 19 0;
-#X connect 2 0 20 0;
-#X connect 3 0 0 7;
-#X connect 5 0 6 0;
-#X connect 6 0 0 1;
-#X connect 7 0 5 0;
-#X connect 8 0 9 0;
-#X connect 9 0 0 2;
-#X connect 10 0 8 0;
-#X connect 11 0 12 0;
-#X connect 12 0 0 3;
-#X connect 13 0 11 0;
-#X connect 14 0 15 0;
-#X connect 15 0 0 4;
-#X connect 16 0 14 0;
-#X connect 17 0 18 0;
-#X connect 18 0 0 5;
-#X connect 19 0 17 0;
-#X connect 20 0 21 0;
-#X connect 21 0 0 6;
+#X connect 3 0 6 0;
+#X connect 5 0 0 1;
+#X connect 5 1 0 2;
+#X connect 5 2 0 3;
+#X connect 5 3 0 4;
+#X connect 5 4 0 5;
+#X connect 5 5 0 6;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
 #X restore 177 163 pd FXchan8;
 #N canvas 676 317 450 300 FXchan9 0;
 #N canvas 171 270 430 385 SlideVFX 0;
 #X obj 12 6 inlet;
 #X obj 12 279 outlet;
 #X obj 67 82 vsl 30 80 0 1 0 0 empty empty scale -2 -9 0 8 -262144
--1 -1 2793 1;
+-1 -1 3990 1;
 #X obj 208 148 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 117 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
@@ -1604,18 +1660,18 @@ scales.;
 #X floatatom 67 167 5 0 0 0 - - -;
 #X floatatom 117 167 5 0 0 0 - - -;
 #X obj 208 78 tgl 15 0 empty empty horizontal 17 7 0 8 -262144 -1 -1
-0 1;
+1 1;
 #X obj 208 98 tgl 15 0 empty empty mirror 17 7 0 8 -262144 -1 -1 1
 1;
 #X obj 117 82 vsl 30 80 0 1 0 0 empty empty speed1 0 -9 0 8 -262144
--1 -1 3272 1;
+-1 -1 5666 1;
 #X msg 281 193 0;
 #X obj 12 241 pix_freeframe ./plugins/SlideVFX;
 #X obj 167 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.47 256;
 #X floatatom 167 167 5 0 0 0 - - -;
 #X obj 167 82 vsl 30 80 0 1 0 0 empty empty speed2 0 -9 0 8 -262144
--1 -1 2394 1;
+-1 -1 2075 1;
 #X text 55 52 SlideVFX;
 #X text 69 277 The image is broken into segments which are slid independantly
 of each other.;
@@ -1702,23 +1758,23 @@ of each other.;
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 4389 1;
+-1 -1 3032 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 4868 1;
+-1 -1 3511 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 6942 1;
+-1 -1 3990 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 1357 1;
+-1 -1 4149 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -2254,7 +2310,7 @@ of each other.;
 #X msg 63 128 0;
 #X obj 64 235 spigot 0;
 #X obj 0 235 spigot 1;
-#X obj 109 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 57
+#X obj 109 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 57;
 #X obj 109 215 invert;
 #X obj 0 160 int;
@@ -2334,7 +2390,7 @@ of each other.;
 #X obj 206 29 tgl 15 0 empty empty dot 17 8 0 10 -262144 -1 -1 1 1
 ;
 #X obj 247 100 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 1;
 #X obj 4 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X msg 47 115 file videos/test/vid4 85;
@@ -2350,7 +2406,6 @@ of each other.;
 #X connect 13 0 36 0;
 #X connect 14 0 28 0;
 #X connect 16 0 18 2;
-#X connect 16 0 17 2;
 #X connect 18 0 25 0;
 #X connect 19 0 20 0;
 #X connect 20 0 16 0;

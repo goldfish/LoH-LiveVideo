@@ -1080,7 +1080,7 @@
 #X obj 206 29 tgl 15 0 empty empty dot/text 17 8 0 10 -262144 -1 -1
 0 1;
 #X obj 247 100 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X obj 4 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 37 89 gemhead;
@@ -1109,7 +1109,7 @@
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -1176,7 +1176,7 @@
 #X connect 26 0 25 0;
 #X restore 127 86 pd 5waySwitcher;
 #X obj 228 86 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 1;
 #X obj 228 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 176 169 Solarize;
@@ -1189,20 +1189,20 @@
 #N canvas 367 211 458 427 ChromiumVFX 0;
 #X obj 12 3 inlet;
 #X obj 57 99 vsl 30 80 0 1 0 0 empty empty edge_1 -2 -9 0 8 -262144
--1 -1 7262 1;
+-1 -1 4149 1;
 #X obj 12 309 outlet;
 #X floatatom 57 188 5 0 0 0 - - -;
 #X obj 107 99 vsl 30 80 0 1 0 0 empty empty edge_2 -2 -9 0 8 -262144
--1 -1 5745 1;
+-1 -1 4708 1;
 #X floatatom 107 188 5 0 0 0 - - -;
 #X obj 157 99 vsl 30 80 0 1 0 0 empty empty red -2 -9 0 8 -262144 -1
--1 7262 1;
+-1 4149 1;
 #X floatatom 157 188 5 0 0 0 - - -;
 #X obj 207 99 vsl 30 80 0 1 0 0 empty empty green -2 -9 0 8 -262144
--1 -1 4947 1;
+-1 -1 6065 1;
 #X floatatom 207 188 5 0 0 0 - - -;
 #X obj 257 99 vsl 30 80 0 1 0 0 empty empty blue -2 -9 0 8 -262144
--1 -1 4469 1;
+-1 -1 1995 1;
 #X floatatom 257 188 5 0 0 0 - - -;
 #X obj 226 71 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
@@ -1393,35 +1393,35 @@ http://www.petewarden.com;
 #N canvas 197 248 437 372 SolarizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty end -2 -9 0 8 -262144 -1
--1 158 1;
+-1 6541 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.784 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty start -2 -9 0 8 -262144
--1 -1 2149 1;
+-1 -1 3350 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.24 256;
 #X obj 57 83 vsl 30 80 0.01 1 1 0 empty empty thresh -2 -9 0 8 -262144
--1 -1 6468 1;
+-1 -1 5667 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.35 256;
 #X obj 162 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty floor -2 -9 0 8 -262144
--1 -1 4945 1;
+-1 -1 5340 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.265 256;
 #X obj 12 241 pix_freeframe ./plugins/SolarizeVFX;
 #X obj 257 83 vsl 30 80 0 1 0 0 empty empty ceiling -2 -9 0 8 -262144
--1 -1 1991 1;
+-1 -1 553 1;
 #X floatatom 257 168 5 0 0 0 - - -;
 #X obj 257 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.81 256;
-#X obj 247 52 tgl 15 0 empty empty limit 17 7 0 8 -262144 -1 -1 1 1
+#X obj 247 52 tgl 15 0 empty empty limit 17 7 0 8 -262144 -1 -1 0 1
 ;
 #X text 69 277 Smoothly changes between increasing and inverting colour
 scales.;
@@ -1563,7 +1563,7 @@ scales.;
 #X connect 16 0 8 0;
 #X restore 136 -21 pd solarizePresets;
 #X obj 136 -42 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 6;
+-1 -1 5;
 #X obj 78 -77 random 7;
 #X text 253 -18 0 for random. 1+ for presets;
 #X connect 0 0 4 0;
@@ -1618,7 +1618,7 @@ angular size of the source segment \, relative to the size of the output
 segment \; altering this value will squash or expand (0.1..10 \, default:
 1);
 #X obj -269 -57 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 6;
+-1 -1 5;
 #X obj -327 -92 random 7;
 #X text -131 -33 0 for random. 1+ for presets;
 #N canvas 793 158 450 300 kaleidoscopePresets 0;
@@ -1733,23 +1733,23 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 0 1;
+-1 -1 6857 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 0 1;
+-1 -1 798 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 0 1;
+-1 -1 7655 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 7740 1;
+-1 -1 474 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -1796,7 +1796,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X obj 126 -42 inlet;
 #X obj 19 244 outlet;
 #X obj 126 28 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 3;
 #X obj 64 -17 random 7;
 #X text 233 29 0 for random. 1+ for presets;
 #N canvas 723 41 450 300 tilePresets 0;
@@ -1908,21 +1908,51 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X restore 222 125 pd cameraFX;
 #X obj 83 42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 277 446 pix_metaimage;
-#X floatatom 366 430 5 0 1 1 size - -;
-#X obj 288 386 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X msg 288 404 cheap \$1;
-#X obj 352 386 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
-1;
-#X msg 352 404 distance \$1;
 #X msg 47 115 file videos/test/vid5 85;
 #X obj 230 263 loadbang;
-#X obj 222 353 spigot 0;
-#X obj 277 353 spigot 1;
-#X obj 289 309 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 248 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 289 331 invert;
+#N canvas 494 395 450 300 toggleMetaimage 0;
+#X obj 19 1 inlet;
+#X obj 86 1 inlet;
+#X obj 19 259 outlet;
+#X obj 74 176 pix_metaimage;
+#X obj 85 116 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0 1
+;
+#X msg 85 134 cheap \$1;
+#X obj 149 116 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 0
+1;
+#X msg 149 134 distance \$1;
+#X obj 86 39 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 31 61 invert;
+#X obj 136 1 inlet;
+#X obj 186 1 inlet;
+#X obj 236 1 inlet;
+#X obj 19 83 spigot 0;
+#X obj 74 83 spigot 1;
+#X connect 0 0 13 0;
+#X connect 0 0 14 0;
+#X connect 1 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 8 0 14 1;
+#X connect 9 0 13 1;
+#X connect 10 0 4 0;
+#X connect 11 0 6 0;
+#X connect 12 0 3 1;
+#X connect 13 0 2 0;
+#X connect 14 0 3 0;
+#X restore 222 350 pd toggleMetaimage;
+#X obj 274 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 300 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 327 331 5 0 0 0 - - -;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;
@@ -1944,8 +1974,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X connect 28 0 29 0;
 #X connect 29 0 30 0;
 #X connect 32 0 31 1;
-#X connect 34 0 51 0;
-#X connect 34 0 52 0;
+#X connect 34 0 46 0;
 #X connect 35 0 34 0;
 #X connect 36 0 31 2;
 #X connect 37 0 41 1;
@@ -1954,16 +1983,10 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X connect 40 0 30 0;
 #X connect 41 0 23 0;
 #X connect 42 0 33 1;
-#X connect 43 0 14 0;
-#X connect 44 0 43 1;
-#X connect 45 0 46 0;
-#X connect 46 0 43 0;
-#X connect 47 0 48 0;
-#X connect 48 0 43 0;
-#X connect 49 0 30 0;
-#X connect 50 0 35 0;
-#X connect 51 0 14 0;
-#X connect 52 0 43 0;
-#X connect 53 0 54 0;
-#X connect 53 0 51 1;
-#X connect 54 0 52 1;
+#X connect 43 0 30 0;
+#X connect 44 0 35 0;
+#X connect 45 0 46 1;
+#X connect 46 0 14 0;
+#X connect 47 0 46 2;
+#X connect 48 0 46 3;
+#X connect 49 0 46 4;

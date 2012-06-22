@@ -547,15 +547,15 @@
 #X connect 8 0 5 0;
 #X connect 9 0 10 0;
 #X connect 10 0 2 4;
-#X restore 222 242 pd colourProc;
+#X restore 222 342 pd colourProc;
 #X obj 222 478 pix_texture;
 #X obj 342 -39 import mrpeach;
-#X obj 309 37 bng 15 250 50 0 empty empty Random 18 8 0 10 -262144
+#X obj 285 186 bng 15 250 50 0 empty empty Random 18 8 0 10 -262144
 -1 -1;
-#X obj 365 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 365 81 metro 4000;
-#X msg 386 55 stop;
+#X obj 285 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 285 165 metro 4000;
+#X msg 306 144 stop;
 #N canvas 175 361 450 300 image1-src 0;
 #X obj 13 14 cnv 15 170 250 empty empty empty 20 12 0 14 -228992 -66577
 0;
@@ -595,10 +595,10 @@
 #X connect 8 0 7 0;
 #X connect 9 0 2 0;
 #X connect 10 0 9 0;
-#X restore 309 144 pd image1-src;
-#X obj 309 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 309 245 pd image1-src;
+#X obj 309 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 326 123 enable;
+#X text 326 224 enable;
 #N canvas 207 410 450 300 chroma_mixer 0;
 #X obj 50 59 cnv 15 160 175 empty empty empty 20 12 0 14 -24198 -66577
 0;
@@ -628,16 +628,16 @@
 #X connect 9 0 1 0;
 #X connect 10 0 1 0;
 #X connect 11 0 1 1;
-#X restore 222 219 pd chroma_mixer;
-#X obj 309 192 pix_invert;
-#X obj 309 168 pix_add;
+#X restore 222 319 pd chroma_mixer;
+#X obj 309 293 pix_invert;
+#X obj 309 269 pix_add;
 #X obj 222 500 rectangle 5.86 3.3;
-#X obj 3 84 cnv 15 200 100 empty empty empty 20 12 0 14 -258113 -66577
+#X obj 3 84 cnv 15 200 105 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X obj 55 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 56 148 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X msg 78 135 auto \$1;
-#X obj 37 161 pix_write;
+#X msg 79 147 auto \$1;
+#X obj 38 169 pix_write;
 #N canvas 819 363 459 351 fiducialProcessing 0;
 #X obj 14 30 pix_grey;
 #X obj 14 51 pix_threshold_bernsen 16 16;
@@ -1075,16 +1075,16 @@
 #X connect 9 0 0 0;
 #X connect 10 0 7 0;
 #X restore 4 61 pd goldfishLogo;
-#X obj 222 306 pix_flip;
-#X msg 230 284 horizontal;
+#X obj 222 406 pix_flip;
+#X msg 230 384 horizontal;
 #X obj 206 29 tgl 15 0 empty empty dot/text 17 8 0 10 -262144 -1 -1
 0 1;
-#X obj 247 100 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
+#X obj 253 205 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
 #X obj 4 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 37 89 gemhead;
-#X msg 5 116 bang;
+#X obj 38 107 gemhead;
+#X msg 6 128 bang;
 #N canvas 167 287 450 300 cameraFX 0;
 #X obj 10 7 inlet;
 #X obj 10 265 outlet;
@@ -1905,12 +1905,12 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X connect 12 0 1 0;
 #X connect 13 0 1 0;
 #X connect 14 0 1 0;
-#X restore 222 125 pd cameraFX;
+#X restore 222 225 pd cameraFX;
 #X obj 83 42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 47 115 file videos/test/vid5 85;
-#X obj 230 263 loadbang;
-#X obj 248 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg 48 127 file videos/test/vid5 85;
+#X obj 230 363 loadbang;
+#X obj 248 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 494 395 450 300 toggleMetaimage 0;
 #X obj 19 1 inlet;
@@ -1947,12 +1947,14 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X connect 12 0 3 1;
 #X connect 13 0 2 0;
 #X connect 14 0 3 0;
-#X restore 222 350 pd toggleMetaimage;
-#X obj 274 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X restore 222 450 pd toggleMetaimage;
+#X obj 274 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 300 332 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 300 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 327 331 5 0 0 0 - - -;
+#X floatatom 327 431 5 0 0 0 - - -;
+#X obj 38 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;
@@ -1990,3 +1992,4 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X connect 47 0 46 2;
 #X connect 48 0 46 3;
 #X connect 49 0 46 4;
+#X connect 50 0 39 0;

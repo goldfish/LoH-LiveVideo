@@ -1955,6 +1955,89 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X floatatom 327 431 5 0 0 0 - - -;
 #X obj 38 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
+#N canvas 276 331 450 336 wiimoteInterface 0;
+#X obj -38 257 wiibuttons lcross rcross ucross dcross a plus minus
+home one two back;
+#X obj -38 165 wiimote wiimote1;
+#X msg -16 115 discover;
+#X msg -6 135 disconnect;
+#X msg -28 87 reportAcceleration \$1;
+#X obj -28 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -38 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg -38 41 reportButtons \$1;
+#X obj -23 192 wiiAcc raw;
+#X msg 115 136 setLED \$1;
+#X obj 115 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 136 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 157 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 178 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#N canvas 0 0 409 401 bytemask 0;
+#X obj 269 332 outlet;
+#X obj 269 279 float;
+#X obj 318 183 |;
+#X obj 110 239 -;
+#X obj 110 204 float;
+#X obj 110 184 trigger bang float;
+#X obj 231 204 &;
+#X obj 183 142 route 0 1;
+#X msg 36 56 \$1 1;
+#X msg 106 56 \$1 2;
+#X msg 176 56 \$1 4;
+#X msg 246 56 \$1 8;
+#X obj 36 15 inlet;
+#X obj 106 15 inlet;
+#X obj 176 15 inlet;
+#X obj 246 15 inlet;
+#X obj 36 35 change;
+#X obj 106 35 change;
+#X obj 176 35 change;
+#X obj 246 35 change;
+#X connect 1 0 2 1;
+#X connect 1 0 4 1;
+#X connect 1 0 6 1;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 5 1 6 0;
+#X connect 6 0 3 1;
+#X connect 7 0 5 0;
+#X connect 7 1 2 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;
+#X connect 10 0 7 0;
+#X connect 11 0 7 0;
+#X connect 12 0 16 0;
+#X connect 13 0 17 0;
+#X connect 14 0 18 0;
+#X connect 15 0 19 0;
+#X connect 16 0 8 0;
+#X connect 17 0 9 0;
+#X connect 18 0 10 0;
+#X connect 19 0 11 0;
+#X restore 115 115 pd bytemask;
+#X connect 1 0 0 0;
+#X connect 1 1 8 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 9 0 1 0;
+#X connect 10 0 14 0;
+#X connect 11 0 14 1;
+#X connect 12 0 14 2;
+#X connect 13 0 14 3;
+#X connect 14 0 9 0;
+#X restore 342 30 pd wiimoteInterface;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;

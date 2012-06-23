@@ -530,13 +530,13 @@
 #X floatatom 67 101 5 0 0 0 - - -;
 #X floatatom 76 119 5 0 0 0 - - -;
 #X obj 120 62 hsl 128 15 0 1 0 0 empty empty Red 135 9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 120 81 hsl 128 15 0 1 0 0 empty empty Green 135 9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 120 101 hsl 128 15 0 1 0 0 empty empty Blue 135 9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 120 121 hsl 128 15 0 1 0 0 empty empty Alpha 135 9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X floatatom 88 139 5 0 0 0 - - -;
 #X connect 0 0 2 0;
 #X connect 2 0 1 0;
@@ -668,8 +668,6 @@
 #X connect 2 0 5 0;
 #X restore 215 271 pd fid1track;
 #X obj 14 223 pix_texture;
-#X obj 259 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
 #X obj 215 115 route 0 1 2 3 4 5 6 7 8 9;
 #X obj 14 272 rectangle 1.5 0.84;
 #X obj 14 159 spigot 1;
@@ -905,7 +903,7 @@
 #X connect 1 2 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
-#X restore 332 182 pd fid0008track;
+#X restore 332 162 pd fid0008track;
 #N canvas 6 415 732 291 fiducialPatchBay 0;
 #X obj 407 18 r fid0008angle;
 #X obj 339 18 r fid0008y;
@@ -925,7 +923,7 @@
 #X connect 1 2 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
-#X restore 229 187 pd fid0001track;
+#X restore 229 207 pd fid0001track;
 #N canvas 281 285 450 300 fid0009track 0;
 #X obj 21 18 inlet;
 #X obj 21 49 unpack f f f;
@@ -940,7 +938,7 @@
 #X connect 1 2 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
-#X restore 347 162 pd fid0009track;
+#X restore 347 142 pd fid0009track;
 #N canvas 281 285 450 300 fid0000track 0;
 #X obj 21 18 inlet;
 #X obj 21 49 unpack f f f;
@@ -955,30 +953,45 @@
 #X connect 1 2 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
-#X restore 215 207 pd fid0000track;
+#X restore 215 227 pd fid0000track;
+#N canvas 140 25 450 300 fid0004track 0;
+#X obj 21 18 inlet;
+#X obj 21 49 unpack f f f;
+#X obj 90 75 rad2deg;
+#X obj 90 96 / 360;
+#X obj 21 158 s fid0004x;
+#X obj 55 138 s fid0004y;
+#X obj 90 118 s fid0004angle;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 5 0;
+#X connect 1 2 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X restore 273 187 pd fid0004track;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 1 0 10 0;
-#X connect 2 1 8 0;
-#X connect 2 1 16 0;
+#X connect 1 0 9 0;
+#X connect 2 1 7 0;
+#X connect 2 1 15 0;
 #X connect 3 0 0 0;
-#X connect 6 0 17 0;
-#X connect 8 0 28 0;
-#X connect 8 1 26 0;
-#X connect 8 3 7 0;
-#X connect 8 8 24 0;
-#X connect 8 9 27 0;
-#X connect 10 0 18 0;
-#X connect 11 0 10 1;
-#X connect 12 0 11 0;
-#X connect 14 0 17 3;
-#X connect 15 0 14 0;
-#X connect 17 0 9 0;
-#X connect 18 0 6 0;
+#X connect 6 0 16 0;
+#X connect 7 0 27 0;
+#X connect 7 1 25 0;
+#X connect 7 4 28 0;
+#X connect 7 8 23 0;
+#X connect 7 9 26 0;
+#X connect 9 0 17 0;
+#X connect 10 0 9 1;
+#X connect 11 0 10 0;
+#X connect 13 0 16 3;
+#X connect 14 0 13 0;
+#X connect 16 0 8 0;
+#X connect 17 0 6 0;
+#X connect 18 0 17 0;
 #X connect 19 0 18 0;
-#X connect 20 0 19 0;
-#X connect 21 0 16 1;
-#X connect 22 0 21 0;
+#X connect 20 0 15 1;
+#X connect 21 0 20 0;
 #X restore 117 48 pd fiducialProcessing;
 #X obj 142 30 tgl 15 0 empty empty monitor 17 8 0 10 -262144 -1 -1
 1 1;
@@ -1127,7 +1140,7 @@
 ;
 #X obj 38 107 gemhead;
 #X msg 6 128 bang;
-#N canvas 115 266 450 361 cameraFX 0;
+#N canvas 447 330 450 361 cameraFX 0;
 #X obj 10 7 inlet;
 #X obj 50 295 outlet;
 #X obj 55 7 inlet;
@@ -1151,7 +1164,7 @@
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 0;
+-1 3;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -1218,7 +1231,7 @@
 #X connect 26 0 25 0;
 #X restore 167 116 pd 5waySwitcher;
 #X obj 268 116 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 3;
 #X obj 268 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 216 199 Solarize;
@@ -1231,20 +1244,20 @@
 #N canvas 367 211 458 427 ChromiumVFX 0;
 #X obj 12 3 inlet;
 #X obj 57 99 vsl 30 80 0 1 0 0 empty empty edge_1 -2 -9 0 8 -262144
--1 -1 4842 1;
+-1 -1 3429 1;
 #X obj 12 309 outlet;
 #X floatatom 57 188 5 0 0 0 - - -;
 #X obj 107 99 vsl 30 80 0 1 0 0 empty empty edge_2 -2 -9 0 8 -262144
--1 -1 3394 1;
+-1 -1 2149 1;
 #X floatatom 107 188 5 0 0 0 - - -;
 #X obj 157 99 vsl 30 80 0 1 0 0 empty empty red -2 -9 0 8 -262144 -1
--1 4149 1;
+-1 158 1;
 #X floatatom 157 188 5 0 0 0 - - -;
 #X obj 207 99 vsl 30 80 0 1 0 0 empty empty green -2 -9 0 8 -262144
--1 -1 6065 1;
+-1 -1 4945 1;
 #X floatatom 207 188 5 0 0 0 - - -;
 #X obj 257 99 vsl 30 80 0 1 0 0 empty empty blue -2 -9 0 8 -262144
--1 -1 1995 1;
+-1 -1 1991 1;
 #X floatatom 257 188 5 0 0 0 - - -;
 #X obj 226 71 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
@@ -1303,7 +1316,7 @@ of the same name.;
 #X restore -18 64 pd ChromiumVFX;
 #X obj 38 -165 inlet;
 #X obj 96 -102 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 6;
 #X obj 38 -137 random 7;
 #X text 213 -78 0 for random. 1+ for presets;
 #N canvas 698 163 450 300 chromiumPresets 0;
@@ -1416,7 +1429,7 @@ of the same name.;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 395 1;
+-1 -1 600 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -1446,7 +1459,7 @@ http://www.petewarden.com;
 #X obj 217 -1 inlet;
 #X obj 106 308 outlet;
 #X obj 155 87 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 6;
 #X obj 155 42 random 7;
 #X text 262 88 0 for random. 1+ for presets;
 #N canvas 824 403 450 300 posterizePresets 0;
@@ -1500,39 +1513,39 @@ http://www.petewarden.com;
 #X connect 9 0 10 0;
 #X connect 10 0 0 1;
 #X restore 142 183 pd FXchan2;
-#N canvas 745 382 454 317 FXchan3 1;
+#N canvas 745 382 454 317 FXchan3 0;
 #N canvas 197 248 437 372 SolarizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty end -2 -9 0 8 -262144 -1
--1 7418 1;
+-1 5024 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.784 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty start -2 -9 0 8 -262144
--1 -1 3508 1;
+-1 -1 2868 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.24 256;
 #X obj 57 83 vsl 30 80 0.01 1 1 0 empty empty thresh -2 -9 0 8 -262144
--1 -1 7096 1;
+-1 -1 1885 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.35 256;
 #X obj 162 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty floor -2 -9 0 8 -262144
--1 -1 395 1;
+-1 -1 2947 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.265 256;
 #X obj 12 241 pix_freeframe ./plugins/SolarizeVFX;
 #X obj 257 83 vsl 30 80 0 1 0 0 empty empty ceiling -2 -9 0 8 -262144
--1 -1 7655 1;
+-1 -1 7497 1;
 #X floatatom 257 168 5 0 0 0 - - -;
 #X obj 257 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.81 256;
-#X obj 247 52 tgl 15 0 empty empty limit 17 7 0 8 -262144 -1 -1 1 1
+#X obj 247 52 tgl 15 0 empty empty limit 17 7 0 8 -262144 -1 -1 0 1
 ;
 #X text 69 277 Smoothly changes between increasing and inverting colour
 scales.;
@@ -1674,7 +1687,7 @@ scales.;
 #X connect 16 0 8 0;
 #X restore 136 -21 pd solarizePresets;
 #X obj 136 -42 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 4;
 #X obj 78 -77 random 7;
 #X text 253 -18 0 for random. 1+ for presets;
 #X obj 45 -32 r fid0001angle;
@@ -1858,23 +1871,23 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 6936 1;
+-1 -1 6217 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 4068 1;
+-1 -1 316 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 3429 1;
+-1 -1 3508 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 1272 1;
+-1 -1 5901 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -1921,7 +1934,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X obj 126 -42 inlet;
 #X obj 19 244 outlet;
 #X obj 126 28 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
+-1 5;
 #X obj 64 -17 random 7;
 #X text 233 29 0 for random. 1+ for presets;
 #N canvas 723 41 450 300 tilePresets 0;
@@ -2076,6 +2089,9 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X obj 236 1 inlet;
 #X obj 19 83 spigot 0;
 #X obj 74 83 spigot 1;
+#X obj 241 208 s fid0004x;
+#X obj 275 188 s fid0004y;
+#X obj 232 63 r fid0004angle;
 #X connect 0 0 13 0;
 #X connect 0 0 14 0;
 #X connect 1 0 8 0;
@@ -2092,6 +2108,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X connect 12 0 3 1;
 #X connect 13 0 2 0;
 #X connect 14 0 3 0;
+#X connect 17 0 3 1;
 #X restore 292 470 pd toggleMetaimage;
 #X obj 344 452 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
@@ -2099,27 +2116,27 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 1;
 #X obj 38 88 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#N canvas 64 94 634 555 wiimoteInterface 0;
+#N canvas 394 117 634 555 wiimoteInterface 0;
 #X obj -28 257 wiibuttons lcross rcross ucross dcross a plus minus
 home one two back;
-#X obj -28 165 wiimote wiimote1;
-#X msg -6 115 discover;
-#X msg 4 135 disconnect;
-#X msg -18 87 reportAcceleration \$1;
-#X obj -18 67 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj -28 185 wiimote wiimote1;
+#X msg 24 135 discover;
+#X msg 34 155 disconnect;
+#X msg 12 107 reportAcceleration \$1;
+#X obj 12 87 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
 #X obj -28 22 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg -28 41 reportButtons \$1;
 #X obj 212 388 wiiAcc raw;
-#X msg 125 136 setLED \$1;
-#X obj 125 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X msg 155 156 setLED \$1;
+#X obj 155 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 146 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 176 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 167 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 197 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 188 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 218 116 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 0 0 409 401 bytemask 0;
 #X obj 269 332 outlet;
@@ -2166,7 +2183,7 @@ home one two back;
 #X connect 17 0 9 0;
 #X connect 18 0 10 0;
 #X connect 19 0 11 0;
-#X restore 125 115 pd bytemask;
+#X restore 155 135 pd bytemask;
 #X obj 262 425 spigot;
 #X obj 305 426 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -2204,6 +2221,13 @@ home one two back;
 #X obj 138 297 select 1;
 #X obj 138 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X msg -18 64 reportStatus;
+#X obj 271 366 s wiimoteMetaSwitch;
+#X obj 271 326 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 271 347 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 271 299 select 1;
 #X connect 0 0 28 0;
 #X connect 0 1 26 0;
 #X connect 0 2 24 0;
@@ -2213,6 +2237,7 @@ home one two back;
 #X connect 0 6 41 0;
 #X connect 0 7 36 0;
 #X connect 0 8 38 0;
+#X connect 0 9 47 0;
 #X connect 0 10 16 0;
 #X connect 1 0 0 0;
 #X connect 1 1 8 0;
@@ -2255,10 +2280,14 @@ home one two back;
 #X connect 40 0 21 0;
 #X connect 41 0 42 0;
 #X connect 42 0 40 0;
+#X connect 43 0 1 0;
+#X connect 45 0 46 0;
+#X connect 46 0 44 0;
+#X connect 47 0 45 0;
 #X restore 7 243 pd wiimoteInterface;
 #X msg 423 443 1;
 #X obj 397 382 vsl 20 75 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7400 1;
+-1 -1 0 1;
 #X msg 454 443 0;
 #N canvas 227 415 450 145 mainCamOut 0;
 #X obj 12 34 inlet;
@@ -2288,10 +2317,11 @@ home one two back;
 #X text 362 104 Chromium;
 #X text 362 148 Kaleidoscope;
 #X obj 337 103 vradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 2;
 #X obj 355 182 tgl 15 0 empty empty bypass 18 8 0 10 -262144 -1 -1
 0 1;
 #X obj 355 55 metro 10000;
+#X obj 271 429 r wiimoteMetaSwitch;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;
@@ -2333,3 +2363,4 @@ home one two back;
 #X connect 56 0 37 1;
 #X connect 57 0 37 3;
 #X connect 58 0 15 0;
+#X connect 59 0 40 0;

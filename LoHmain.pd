@@ -1180,7 +1180,7 @@
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 3;
+-1 1;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -1247,7 +1247,7 @@
 #X connect 26 0 25 0;
 #X restore 167 116 pd 5waySwitcher;
 #X obj 268 116 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 1;
 #X obj 268 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 216 199 Solarize;
@@ -1260,20 +1260,20 @@
 #N canvas 367 211 458 427 ChromiumVFX 0;
 #X obj 12 3 inlet;
 #X obj 57 99 vsl 30 80 0 1 0 0 empty empty edge_1 -2 -9 0 8 -262144
--1 -1 2149 1;
+-1 -1 3429 1;
 #X obj 12 309 outlet;
 #X floatatom 57 188 5 0 0 0 - - -;
 #X obj 107 99 vsl 30 80 0 1 0 0 empty empty edge_2 -2 -9 0 8 -262144
--1 -1 3350 1;
+-1 -1 2149 1;
 #X floatatom 107 188 5 0 0 0 - - -;
 #X obj 157 99 vsl 30 80 0 1 0 0 empty empty red -2 -9 0 8 -262144 -1
--1 6541 1;
+-1 158 1;
 #X floatatom 157 188 5 0 0 0 - - -;
 #X obj 207 99 vsl 30 80 0 1 0 0 empty empty green -2 -9 0 8 -262144
--1 -1 5340 1;
+-1 -1 4945 1;
 #X floatatom 207 188 5 0 0 0 - - -;
 #X obj 257 99 vsl 30 80 0 1 0 0 empty empty blue -2 -9 0 8 -262144
--1 -1 553 1;
+-1 -1 1991 1;
 #X floatatom 257 188 5 0 0 0 - - -;
 #X obj 226 71 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
@@ -1332,7 +1332,7 @@ of the same name.;
 #X restore -18 64 pd ChromiumVFX;
 #X obj 38 -165 inlet;
 #X obj 96 -102 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+-1 -1 6;
 #X obj 38 -137 random 7;
 #X text 213 -78 0 for random. 1+ for presets;
 #N canvas 698 163 450 300 chromiumPresets 0;
@@ -1445,7 +1445,7 @@ of the same name.;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 205 1;
+-1 -1 798 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -1475,7 +1475,7 @@ http://www.petewarden.com;
 #X obj 217 -1 inlet;
 #X obj 106 308 outlet;
 #X obj 155 87 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 4;
+-1 3;
 #X obj 155 42 random 7;
 #X text 262 88 0 for random. 1+ for presets;
 #N canvas 824 403 450 300 posterizePresets 0;
@@ -1533,31 +1533,31 @@ http://www.petewarden.com;
 #N canvas 197 248 437 372 SolarizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty end -2 -9 0 8 -262144 -1
--1 6541 1;
+-1 5024 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.784 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty start -2 -9 0 8 -262144
--1 -1 3350 1;
+-1 -1 2868 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.24 256;
 #X obj 57 83 vsl 30 80 0.01 1 1 0 empty empty thresh -2 -9 0 8 -262144
--1 -1 5667 1;
+-1 -1 1885 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.35 256;
 #X obj 162 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty floor -2 -9 0 8 -262144
--1 -1 5340 1;
+-1 -1 2947 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.265 256;
 #X obj 12 241 pix_freeframe ./plugins/SolarizeVFX;
 #X obj 257 83 vsl 30 80 0 1 0 0 empty empty ceiling -2 -9 0 8 -262144
--1 -1 553 1;
+-1 -1 7497 1;
 #X floatatom 257 168 5 0 0 0 - - -;
 #X obj 257 29 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.81 256;
@@ -1703,7 +1703,7 @@ scales.;
 #X connect 16 0 8 0;
 #X restore 136 -21 pd solarizePresets;
 #X obj 136 -42 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 5;
+-1 -1 4;
 #X obj 78 -77 random 7;
 #X text 253 -18 0 for random. 1+ for presets;
 #X obj 45 -32 r fid0001angle;
@@ -1887,23 +1887,23 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 6217 1;
+-1 -1 6857 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 316 1;
+-1 -1 798 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 3508 1;
+-1 -1 7655 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 5901 1;
+-1 -1 474 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -1950,7 +1950,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X obj 126 -42 inlet;
 #X obj 19 244 outlet;
 #X obj 126 28 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 5;
+-1 3;
 #X obj 64 -17 random 7;
 #X text 233 29 0 for random. 1+ for presets;
 #N canvas 723 41 450 300 tilePresets 0;
@@ -2426,6 +2426,107 @@ http://www.petewarden.com;
 #X restore 292 503 pd lumaoffsetPost;
 #X obj 316 481 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#N canvas 0 0 663 515 bloomPost 0;
+#N canvas 367 266 437 372 BloomVFX 0;
+#X obj 12 6 inlet;
+#X obj 57 83 vsl 30 80 0 1 0 1 empty empty radius -2 -9 0 8 -262144
+-1 -1 3886 1;
+#X obj 12 279 outlet;
+#X floatatom 57 168 5 0 0 0 - - -;
+#X text 53 50 BloomVFX;
+#X obj 107 83 vsl 30 80 1 4 0 1 empty empty passes -2 -9 0 8 -262144
+-1 -1 5500 1;
+#X floatatom 107 168 5 0 0 0 - - -;
+#X obj 157 83 vsl 30 80 0 1 0 1 empty empty floor -2 -9 0 8 -262144
+-1 -1 2700 1;
+#X floatatom 157 168 5 0 0 0 - - -;
+#X obj 207 83 vsl 30 80 0 1 0 1 empty empty ceiling -2 -9 0 8 -262144
+-1 -1 3678 1;
+#X floatatom 207 168 5 0 0 0 - - -;
+#X obj 257 83 vsl 30 80 0 1 0 1 empty empty aspect -2 -9 0 8 -262144
+-1 -1 5600 1;
+#X floatatom 257 168 5 0 0 0 - - -;
+#X obj 307 83 vsl 30 80 0 1 0 1 empty empty boost -2 -9 0 8 -262144
+-1 -1 1500 1;
+#X floatatom 307 168 5 0 0 0 - - -;
+#X obj 269 52 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
+-1 -1;
+#X obj 57 23 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
+-1 0.34 256;
+#X obj 107 23 nbx 1 14 1 4 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 3 256;
+#X obj 157 23 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.62 256;
+#X obj 207 23 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.82 256;
+#X obj 257 23 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.34 256;
+#X obj 307 23 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
+-1 -1 0.13 256;
+#X text 69 277 This effect tries to simulate the photographic problem
+of 'blooming' \, where areas of a picture exposed to very strong light
+bleed into neighbouring areas \, brightening them and giving light
+sources a halo.;
+#X obj 12 241 pix_freeframe ./plugins/BloomVFX;
+#X text 14 334 Uses the Pete's Plugins freeframe plugin Bloom. http://www.petewarden.com
+;
+#X connect 0 0 23 0;
+#X connect 1 0 3 0;
+#X connect 3 0 23 1;
+#X connect 5 0 6 0;
+#X connect 6 0 23 2;
+#X connect 7 0 8 0;
+#X connect 8 0 23 3;
+#X connect 9 0 10 0;
+#X connect 10 0 23 4;
+#X connect 11 0 12 0;
+#X connect 12 0 23 5;
+#X connect 13 0 14 0;
+#X connect 14 0 23 6;
+#X connect 15 0 16 0;
+#X connect 15 0 17 0;
+#X connect 15 0 18 0;
+#X connect 15 0 19 0;
+#X connect 15 0 20 0;
+#X connect 15 0 21 0;
+#X connect 16 0 1 0;
+#X connect 17 0 5 0;
+#X connect 18 0 7 0;
+#X connect 19 0 9 0;
+#X connect 20 0 11 0;
+#X connect 21 0 13 0;
+#X connect 23 0 2 0;
+#X coords 0 -1 1 1 295 135 2 50 50;
+#X restore -166 129 pd BloomVFX;
+#X obj -221 21 inlet;
+#X obj -154 21 inlet;
+#X obj -221 299 outlet;
+#X obj -154 59 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj -209 81 invert;
+#X obj -116 21 inlet;
+#X obj -65 21 inlet;
+#X obj -14 21 inlet;
+#X obj -221 103 spigot 0;
+#X obj -166 103 spigot 1;
+#X obj 72 63 r fid0006angle;
+#X obj 165 63 r fid0006y;
+#X obj 233 63 r fid0006x;
+#X obj 37 21 inlet;
+#X obj 148 96 hsl 128 30 0.4 0.6 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 3 0;
+#X connect 1 0 9 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 10 1;
+#X connect 5 0 9 1;
+#X connect 9 0 3 0;
+#X connect 10 0 0 0;
+#X restore 292 461 pd bloomPost;
+#X obj 305 440 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 1 0 2 0;
 #X connect 2 0 1 0;
 #X connect 4 0 6 0;
@@ -2446,7 +2547,7 @@ http://www.petewarden.com;
 #X connect 25 0 26 0;
 #X connect 26 0 27 0;
 #X connect 29 0 28 1;
-#X connect 31 0 60 0;
+#X connect 31 0 62 0;
 #X connect 32 0 31 0;
 #X connect 33 0 28 2;
 #X connect 34 0 30 0;
@@ -2470,3 +2571,5 @@ http://www.petewarden.com;
 #X connect 59 0 27 0;
 #X connect 60 0 41 0;
 #X connect 61 0 60 1;
+#X connect 62 0 60 0;
+#X connect 63 0 62 1;

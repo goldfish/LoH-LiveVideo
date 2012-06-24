@@ -1180,7 +1180,7 @@
 #X msg 287 167 1;
 #X msg 317 167 0;
 #X obj 98 61 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 3;
 #X obj 14 198 spigot;
 #X obj 74 198 spigot;
 #X obj 134 198 spigot;
@@ -1247,13 +1247,13 @@
 #X connect 26 0 25 0;
 #X restore 167 116 pd 5waySwitcher;
 #X obj 268 116 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 3;
 #X obj 268 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 216 199 Solarize;
 #X text 141 199 Posterize;
 #X text 366 199 Tile;
-#N canvas 231 257 432 437 FXchan1 0;
+#N canvas 70 122 432 437 FXchan1 0;
 #X obj -18 -165 inlet;
 #X obj 96 -165 inlet;
 #X obj -18 229 outlet;
@@ -1445,7 +1445,7 @@ of the same name.;
 #N canvas 101 275 437 401 PosterizeVFX 0;
 #X obj 12 6 inlet;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty colours -2 -9 0 8 -262144
--1 -1 798 1;
+-1 -1 292 1;
 #X obj 12 279 outlet;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 93 85 bng 15 250 50 0 empty empty default 17 7 0 8 -262144 -1
@@ -1475,7 +1475,7 @@ http://www.petewarden.com;
 #X obj 217 -1 inlet;
 #X obj 106 308 outlet;
 #X obj 155 87 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 3;
+-1 5;
 #X obj 155 42 random 7;
 #X text 262 88 0 for random. 1+ for presets;
 #N canvas 824 403 450 300 posterizePresets 0;
@@ -1764,7 +1764,7 @@ angular size of the source segment \, relative to the size of the output
 segment \; altering this value will squash or expand (0.1..10 \, default:
 1);
 #X obj -259 -47 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 2;
 #X obj -317 -82 random 7;
 #X text -121 -23 0 for random. 1+ for presets;
 #N canvas 793 158 450 300 kaleidoscopePresets 0;
@@ -1849,7 +1849,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X obj -228 37 r wiimoteXacc;
 #X obj -208 86 r wiimoteYacc;
 #X obj -208 110 * 360;
-#X obj -228 60 * 180;
+#X obj -228 60 * -180;
 #X connect 0 0 4 0;
 #X connect 2 0 28 0;
 #X connect 3 0 27 0;
@@ -1887,23 +1887,23 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #N canvas 106 270 437 372 TileVFX 0;
 #X obj 12 6 inlet;
 #X obj 157 83 vsl 30 80 0 1 0 0 empty empty width -2 -9 0 8 -262144
--1 -1 6857 1;
+-1 -1 6217 1;
 #X obj 12 279 outlet;
 #X floatatom 157 168 5 0 0 0 - - -;
 #X obj 157 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 207 83 vsl 30 80 0 1 0 0 empty empty height -2 -9 0 8 -262144
--1 -1 798 1;
+-1 -1 316 1;
 #X floatatom 207 168 5 0 0 0 - - -;
 #X obj 207 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.2 256;
 #X obj 107 83 vsl 30 80 0 1 0 0 empty empty skew -2 -9 0 8 -262144
--1 -1 7655 1;
+-1 -1 3508 1;
 #X floatatom 107 168 5 0 0 0 - - -;
 #X obj 107 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.5 256;
 #X obj 57 83 vsl 30 80 0 1 0 0 empty empty angle -2 -9 0 8 -262144
--1 -1 474 1;
+-1 -1 5901 1;
 #X floatatom 57 168 5 0 0 0 - - -;
 #X obj 57 31 nbx 4 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
 -1 0.5 256;
@@ -1950,7 +1950,7 @@ segment \; altering this value will squash or expand (0.1..10 \, default:
 #X obj 126 -42 inlet;
 #X obj 19 244 outlet;
 #X obj 126 28 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
--1 3;
+-1 5;
 #X obj 64 -17 random 7;
 #X text 233 29 0 for random. 1+ for presets;
 #N canvas 723 41 450 300 tilePresets 0;
@@ -2303,7 +2303,7 @@ home one two back;
 #X restore 7 243 pd wiimoteInterface;
 #X msg 433 540 1;
 #X obj 407 479 vsl 20 75 0.01 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 7400 1;
 #X msg 464 540 0;
 #N canvas 227 415 450 145 mainCamOut 0;
 #X obj 12 34 inlet;
@@ -2338,18 +2338,18 @@ home one two back;
 #X obj 355 55 metro 10000;
 #X obj 271 526 r wiimoteMetaSwitch;
 #X msg 48 127 file videos/mf/vid03 85;
-#N canvas 71 93 645 465 lumaoffsetPost 0;
+#N canvas 71 93 544 465 lumaoffsetPost 0;
 #N canvas 645 332 430 385 HalfToneVFX 0;
 #X obj 12 6 inlet;
 #X obj 12 279 outlet;
 #X obj 67 82 vsl 30 80 0 1 0 0 empty empty scale -2 -9 0 8 -262144
--1 -1 3956 1;
+-1 -1 3919 1;
 #X obj 161 138 bng 15 250 50 0 empty empty defaults 17 7 0 8 -262144
 -1 -1;
 #X obj 117 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144
 -1 -1 0.361634 256;
 #X obj 67 30 nbx 3 14 0 1 0 1 empty empty empty 0 -8 0 10 -262144 -1
--1 0.500787 256;
+-1 0.496063 256;
 #X floatatom 67 167 5 0 0 0 - - -;
 #X floatatom 117 167 5 0 0 0 - - -;
 #X obj 12 241 pix_freeframe ./plugins/LumaOffsetVFX;
@@ -2393,7 +2393,7 @@ http://www.petewarden.com;
 #X obj -231 11 inlet;
 #X obj -164 11 inlet;
 #X obj -231 289 outlet;
-#X obj -164 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -164 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -219 71 invert;
 #X obj -126 11 inlet;
@@ -2406,7 +2406,7 @@ http://www.petewarden.com;
 #X obj 223 53 r fid0006x;
 #X obj 27 11 inlet;
 #X obj -102 46 hsl 128 30 0.4 0.6 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 6400 1;
+-262144 -1 -1 6100 1;
 #X connect 0 0 3 0;
 #X connect 1 0 9 0;
 #X connect 1 0 10 0;
